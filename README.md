@@ -9,13 +9,28 @@ Visu.ai is a Chrome extension that activates on shopping websites (currently sup
 - Shuvam Kumar Panda - shuvamkumar2001@gmail.com
 - Manas Ranjan Munda - manasranjanmunda1410@gmail.com
 
-## 🚀 Features
+# 🚀 Features
+- 🔗 1-Click Chrome Extension Integration
+    Seamlessly integrates with online shopping platforms (currently Amazon) to extract product images in one click. No copy-pasting or manual image downloads required.
 
-- 🧩 Chrome extension support for shopping platforms (currently Amazon)
-- 🖼️ Auto-detect and segment product images (YOLOv8)
-- 🛠️ Backend powered by Flask and OpenCV
-- 🧠 Converts segmented 2D image into a 3D model using Midas Anything Model
-- 👁️ Real-time visualization of the generated 3D object
+- 🖼️ AI-Powered Product Image Detection
+    Automatically detects, segments, and enhances product images using YOLOv8 for high-precision object isolation — ensuring only the product is extracted, not the background clutter.
+
+- 🧠 2D to 3D Model Conversion Engine
+    Leverages Midas + Anything Model (SAM) to infer depth and structure from a single 2D image, generating a lightweight, realistic 3D mesh.
+
+- 🔍 Real-Time 3D Model Viewer
+    Instantly preview the 3D model in an interactive viewer right within the browser. Rotate, zoom, and inspect the product from any angle in real-time.
+    
+- 🔄 Python-Based Backend (Flask + OpenCV)
+    Robust and efficient backend processing pipeline for image preprocessing, depth estimation, segmentation, and 3D reconstruction.
+    
+- 🧵 PLY Model Generation with Color Fidelity
+    Outputs .ply 3D models that preserve texture and color using advanced vertex coloring — perfect for realistic previews and downstream use in AR/VR pipelines.
+
+- 🌐 Cross-Platform Support
+    Works across macOS, Windows, and Linux with minimal dependencies, enabling developers and consumers alike to experience high-fidelity 3D without special hardware.
+
 
 ## Motivation
 
