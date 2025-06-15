@@ -90,6 +90,16 @@ We created this project to address the challenge of visualizing 3D models of pro
 
 ---
 
+## 📦 Installation
+
+1. Run the project :
+
+   ```bash
+   ./startup.ps1
+   ```
+
+---
+
 ## 📂 Folder Structure
 
 ```
@@ -149,38 +159,6 @@ Visu_Ai/
         ├── logo.svg
         ├── reportWebVitals.js
         └── setupTests.js
-
-```
-
-## 🧾 manifest.json (for Chrome Extension)
-
-```json
-{
-  "manifest_version": 3,
-  "name": "Visu.ai",
-  "version": "1.0",
-  "description": "Generate 3D models from shopping site images.",
-  "permissions": ["activeTab", "scripting"],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  },
-  "content_scripts": [
-    {
-      "matches": ["*://*.amazon.in/*", "*://*.flipkart.com/*"],
-      "js": ["content.js"]
-    }
-  ],
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  }
-}
 ```
 
 ---
