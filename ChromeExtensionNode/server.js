@@ -88,8 +88,8 @@ app.post("/getImage", upload.single("filename"), async (req, res) => {
       error: error.message,
     });
   }
-  const feedback = (await axios.get("http://localhost:6000/get3d"));
-  feedback.status(200).send("Calling get3d")
+  const feedback = await axios.get("http://localhost:6000/get3d");
+  feedback?.status(200)?.send("Calling get3d");
 });
 
 // Start server
