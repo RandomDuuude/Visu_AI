@@ -92,6 +92,14 @@ We created this project to address the challenge of visualizing 3D models of pro
 - Pandas / JSON Handling
   For handling metadata, logging, and communicating results and inference stats across backend modules.
 
+## Reference Images:
+    ### Object Detection using Yolov8
+    ![image](https://github.com/user-attachments/assets/539be039-4182-427c-84ca-86d00c6e52e8)
+
+    ### 3d Point Cloud Mesh
+    ![image](https://github.com/user-attachments/assets/35a4f6e1-8218-4d1f-a593-379b83c74344)
+
+
 ## 📦 Installation
 
 1. Clone the repository:
@@ -140,6 +148,9 @@ We created this project to address the challenge of visualizing 3D models of pro
 2. Enable **Developer Mode**
 3. Click **Load unpacked**
 4. Select the `extension/` folder in this repository which is `ChromeExtension`
+
+![image](https://github.com/user-attachments/assets/4e5a6bcc-795f-4263-a64a-f07fdbe4f645)
+
 
 ---
 
@@ -232,3 +243,8 @@ Licensed under the [MIT License](LICENSE).
 - [OpenCV](https://opencv.org/)
 - [Flask](https://flask.palletsprojects.com/)
 - [Chrome Extensions Docs](https://developer.chrome.com/docs/extensions/)
+
+## Team Behind the Dream : 
+
+![image](https://github.com/user-attachments/assets/3936d30e-bc3a-459a-b542-7434c7cc75ce)
+
