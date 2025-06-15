@@ -93,11 +93,11 @@ We created this project to address the challenge of visualizing 3D models of pro
   For handling metadata, logging, and communicating results and inference stats across backend modules.
 
 ## Reference Images:
-    ### Object Detection using Yolov8
-    ![image](https://github.com/user-attachments/assets/539be039-4182-427c-84ca-86d00c6e52e8)
+### Object Detection using Yolov8
+![image](https://github.com/user-attachments/assets/539be039-4182-427c-84ca-86d00c6e52e8)
 
-    ### 3d Point Cloud Mesh
-    ![image](https://github.com/user-attachments/assets/35a4f6e1-8218-4d1f-a593-379b83c74344)
+### 3d Point Cloud Mesh
+![image](https://github.com/user-attachments/assets/35a4f6e1-8218-4d1f-a593-379b83c74344)
 
 
 ## 📦 Installation
