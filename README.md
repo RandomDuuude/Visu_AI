@@ -2,12 +2,20 @@
 
 Visu.ai is a Chrome extension that activates on shopping websites (currently supports amazon). It prompts users to select a background surface, detects the searched object, and generates a 3D model from segmented 2D images right on the local compute.
 
-# Team
+# Contributors 
 
-- Gunjan Giri - gunjangiri8410@gmail.com
-- Risabh Kedia - risabh.kedia12@gmail.com
-- Shuvam Kumar Panda - shuvamkumar2001@gmail.com
-- Manas Ranjan Munda - manasranjanmunda1410@gmail.com
+- Gunjan Giri
+    gunjangiri8410@gmail.com
+    https://www.linkedin.com/in/gunjan-giri/
+- Risabh Kedia
+    risabh.kedia12@gmail.com
+    https://www.linkedin.com/in/risabh-kedia/
+- Shuvam Kumar Panda
+    shuvamkumar2001@gmail.com
+    https://www.linkedin.com/in/shuvam-kumar-panda-9901b4192/ 
+- Manas Ranjan Munda
+    manasranjanmunda1410@gmail.com
+    https://www.linkedin.com/in/manas-ranjan-munda/
 
 # 🚀 Features
 - 🔗 1-Click Chrome Extension Integration
@@ -36,23 +44,53 @@ Visu.ai is a Chrome extension that activates on shopping websites (currently sup
 
 We created this project to address the challenge of visualizing 3D models of products in a shopping site. The current process of generating 3D models manually is time-consuming and requires users to manually input dimensions of the product fromm the end user. Our extension automates this process, saving users time and effort.
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-**Frontend:**
+## 🧩 Frontend
 
 - Chrome Extension (JavaScript, HTML, CSS)
+      Provides a seamless one-click UI integrated directly into shopping websites (currently Amazon).
+      Extracts relevant product image URLs from the DOM and sends them to the backend for processing.
+      Allows users to preview 3D models within the browser using embedded viewers (powered by Three.js).
 
-**Backend:**
-
-- Flask
+- Three.js
+      Enables interactive 3D model visualization in the browser.
+      Allows real-time rotation, zooming, lighting effects, and material rendering to simulate a realistic product viewing experience.
+      Supports importing and rendering .ply models with vertex color data for accurate textures.
+  
+## ⚙️ Backend
+- Flask (Python)
+      Lightweight REST API framework serving as the primary controller for handling image segmentation, depth estimation, and 3D reconstruction pipelines.
+      Handles incoming requests from the Chrome extension and returns processed 3D model files.
+      Routes are modular and support asynchronous handling for scalability.
 - OpenCV
-- Node JS
-- 3JS
+      Used for advanced image preprocessing: denoising, cropping, contour extraction, and background removal.
+      Assists in isolating product objects and preparing them for depth estimation and segmentation.
 
-**AI Models:**
+- Node.js
+      Supports utility microservices like file conversion, logging, cloud storage interactions (e.g., uploading to S3/GCS), or optional proxy handling for CORS and CDN management.
+      Can also act as a bridge between the frontend Chrome extension and the Python backend in hybrid deployments.
 
-- Midas Anything Model
-- Ultralytics YOLOv8
+
+## 🧠 AI/ML Models
+- Ultralytics YOLOv8 (Object Detection)
+     High-performance object detection model used for identifying and segmenting the core product object from cluttered e-commerce images.
+     Supports bounding box refinement and mask prediction (with instance segmentation extension).
+
+- MiDaS + SAM (Midas Anything Model)
+        Combines MiDaS (depth estimation) with Meta's SAM (Segment Anything Model) to produce semantically accurate depth maps and segment masks from a single 2D image.
+        Enables 3D shape reconstruction from a flat image using inferred depth, ideal for generating textured mesh surfaces.
+
+
+## 🧪 Other Technologies & Libraries
+- NumPy, SciPy
+  Used in backend for numerical processing, mesh computation, and matrix operations involved in 3D reconstruction.
+    
+- Trimesh / Open3D / MeshLab (Optional)
+  Libraries considered for cleaning, repairing, or optimizing 3D mesh outputs before visualization.
+    
+- Pandas / JSON Handling
+  For handling metadata, logging, and communicating results and inference stats across backend modules.
 
 ## 📦 Installation
 
